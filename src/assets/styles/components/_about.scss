@@ -1,0 +1,54 @@
+#about {
+background-color: #f1efefe0;
+color: #333;
+
+.dark-logo {
+    padding: 30px 0 30px 0;
+    width: 30%;
+}
+    .first-col {
+        border-right: 1px solid rgb(20, 20, 19);
+    }
+    .about {
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+    h1 {
+        font-size: 3rem;
+        padding: 10px 0 20px 0 !important;
+        
+    }
+    h3 {
+        font-weight: 600;
+        text-transform: uppercase;
+       
+    }
+    span {
+        font-weight: bold;
+    }
+
+    hr {
+    border: 2px solid goldenrod;
+    width: 60%;
+    margin: 20px 0  30px  20%  ;
+    }
+    .contact {
+        cursor: pointer;
+        padding-bottom: 25px;
+        a {
+        text-decoration: none;
+         color:  rgb(100, 100, 221) !important; ;
+            &:hover {
+               color: #333 !important ;
+            }
+         }
+    }
+    
+   
+}
+@media (max-width: 568px) {
+    .about {
+   padding: 0px !important;
+   
+}
+}

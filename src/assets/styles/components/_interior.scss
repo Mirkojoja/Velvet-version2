@@ -1,0 +1,76 @@
+#interior {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15%;
+    justify-content: space-evenly;
+    background-image: url("https://cdn.pixabay.com/photo/2018/08/08/12/56/abstract-3592117_1280.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+   
+ 
+    .image {
+      background-repeat: no-repeat;
+      background-position: center ;
+      background-size: cover;
+      border: 1px solid #ebebeb;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .blueimp-gallery {
+        background: #16222A !important;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #3A6073, #16222A);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #3A6073, #16222A);
+    }
+    .btn-container {
+        margin-top: 30px;
+        .menu-btn {
+            width: 260px;
+            height: 40px;
+            padding: 5px;
+            margin-bottom: 30px;
+            color: #000;
+            border: 3px solid #bec3c7;
+            font-weight: 600;
+            background: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            text-transform: uppercase;
+            justify-content: center;
+               transition: all 0.3s ease;
+               overflow: hidden;
+      
+               
+               &:after {
+                   position: absolute;
+                   content: " ";
+                   top: 0;
+                   left: 0;
+                   z-index: -1;
+                   width: 100%;
+                   height: 100%;
+                   transition: all 0.3s ease;
+                   -webkit-transform: scale(.1);
+                   transform: scale(.1);
+                 }
+                 &:hover {
+                   color: #bec3c7;
+                   background: #000;
+                   -webkit-transform: scale(1);
+                   transform: scale(1);
+                 }
+         }
+
+    }
+    
+    @media (max-width: 576px) {
+        .btn-container {
+            margin-top: 10%;
+          
+        }
+    }
+  }

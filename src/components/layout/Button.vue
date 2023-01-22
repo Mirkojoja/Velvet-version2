@@ -1,0 +1,101 @@
+<template>
+    <button @click="handleClick">
+        <span class="circle" aria-hidden="true">
+            <span class="arrow_icon"></span>
+        </span>
+        <span :style="{ 'color': color }" class="button_text">{{ title }}</span>
+    </button>
+</template>
+
+<script>
+export default {
+    name: 'Button',
+    props: {
+        title: {
+            type: String,
+
+        },
+        color: {
+            type: String,
+            default: 'default'
+        }
+    },
+    methods: {
+        handleClick() {
+            this.$emit('buttonClicked');
+        }
+    }
+}
+</script>
+
+<style  >
+button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    background: transparent;
+    width: 13rem;
+    height: auto;
+}
+
+button .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: rgba(190, 18, 60);
+    border-radius: 1.625rem;
+}
+
+button .arrow_icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+}
+
+button .arrow_icon::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+}
+
+button .button_text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    inset: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+button:hover .circle {
+    width: 100%;
+}
+
+button:hover .arrow_icon {
+    background: #fff;
+    transform: translate(1rem, 0);
+}
+</style>
