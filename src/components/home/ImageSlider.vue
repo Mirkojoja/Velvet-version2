@@ -1,61 +1,41 @@
 <template>
-  <div>
-    <section class=" bg-bg-fresh  bg-cover bg-center object-cover bg-no-repeat flex flex-row">
-      <div class="mx-auto bg-transparent max-w-[1340px] md:px-4 py-16  sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0 ">
-        <div class=" grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
-          <div class="max-w-xl text-center sm:text-left ">
-            <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">
-              Preporuka našeg Šefa Kuhinje
-            </h2>
-
-            <p class="mt-4 text-lg text-white">
-              Vrhunska priprema i posvećenost poslu čine da naša jela pored toga što izgledaju lepo predstavljaju
-              pravi užitak za vas i vaša nepca.
-            </p>
-            <div class="py-8">
-              <router-link to="/jelovnik">
-                <Button :title="menu" />
-              </router-link>
-            </div>
-          </div>
-
-          <div class="md:mx-6 lg:col-span-2 0 overflow-hidden ">
-            <blockquote class="flex h-full flex-col justify-between bg-white md:px-8 py-12">
-              <swiper :slides-per-view="3" :space-between="30" :loop="true" :pagination="true" @swiper="onSwiper"
-                @slideChange="onSlideChange">
-                <swiper-slide v-for="item in galleryItems" :key="item.id" class="test">
-                  <img :src="item.url" width="800" height="400" class="img-fluid w-100 mx-auto rounded-2xl" blank=" ">
-                  <p class=" text-gray-800 text-lg md:text-xl font-bold font-serif">{{ item.hoovertext }}</p>
-                </swiper-slide>
-              </swiper>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </section>
-
+  <div class="relative bg-bg-fresh bg-cover bg-center object-cover bg-no-repeat px-5 md:px-8 py-12">
+    <div class="py-8 flex flex-col justify-center ">
+      <h2 class="text-3xl font-bold text-rose-700 tracking-tight sm:text-4xl uppercase">
+        Preporuka našeg Šefa Kuhinje
+      </h2>
+      <p class="my-4 text-lg text-gray-800 font font-semibold">
+        Vrhunska priprema i posvećenost poslu čine da naša jela pored toga što izgledaju lepo predstavljaju
+        pravi užitak za vas i vaša nepca.
+      </p>
+      <router-link to="/jelovnik">
+        <Button :title="menu" />
+      </router-link>
+    </div>
+    <div class="flex overflow-hidden w-full">
+      <swiper :options="swiperOption">
+        <swiper-slide v-for="item in galleryItems" :key="item.id">
+          <img :src="item.url" class="rounded-2xl" blank=" ">
+          <p class=" text-gray-800 text-lg md:text-xl font-bold font-serif">{{ item.hoovertext }}</p>
+        </swiper-slide>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </swiper>
+    </div>
   </div>
-
-
-
-
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 import Button from '../layout/Button.vue'
-import { Navigation, Pagination } from 'swiper'
-
-import { SwiperCore, Swiper, SwiperSlide } from 'swiper-vue2'
-
-import 'swiper/swiper-bundle.css'
-
-SwiperCore.use([Navigation, Pagination])
+import "swiper/css/swiper.min.css";
 
 export default {
+  props: ["items"],
   components: {
     Swiper,
     SwiperSlide,
-    Button,
+    Button
   },
   data() {
     return {
@@ -170,48 +150,67 @@ export default {
           hoovertext: "Nutella cake",
         },
       ],
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+      swiperOption: {
+        slidesPerView: 8,
+        spaceBetween: 10,
+        autoplay: {
+          delay: 3000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        breakpoints: {
+          1350: {
+            slidesPerView: 6,
+            spaceBetween: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 2,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+        },
       },
-    }
+    };
   },
-  methods: {
-    // getImageUrl(imageId) {
-    //   return `https://picsum.photos/600/400/?image=${imageId}`
-    // },
-
-    onSwiper(swiper) {
-      console.log(swiper)
-    },
-    onSlideChange() {
-      console.log('slide change')
-    }
-  }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-.test {
-  width: 450px !important;
+@import "swiper/swiper.scss";
+
+img {
+  height: 300px;
+  width: 300px;
+  border-radius: 3px;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
+.swiper-slide {
+  padding-right: 3px;
 }
 
-.w-100 {
-  width: 100%;
-}
+.swiper-button-next,
+.swiper-button-prev {
+  --swiper-navigation-color: #ccc;
+  --swiper-navigation-size: 20px;
+  --swiper-navigation-color: red;
+  --swiper-navigation-font: bold;
 
-.ml-auto,
-.mx-auto {
-  margin-left: auto;
-}
-
-.mr-auto,
-.mx-auto {
-  margin-right: auto;
+  &:hover {
+    --swiper-navigation-color: #666;
+  }
 }
 </style>

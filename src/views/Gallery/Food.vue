@@ -1,22 +1,14 @@
 <template>
-  <div id="food">
+  <div id="food" class="mt-[35%] md:mt-[15%]">
     <gallery :images="images" :index="index" @close="index = null"></gallery>
 
-    <div
-      v-for="(image, imageIndex) in images"
-      :key="imageIndex"
-      class="image"
-      :style="{
-        backgroundImage: 'url(' + image + ')',
-        width: '350px',
-        height: '200px',
-      }"
-      @click="index = imageIndex"
-    ></div>
+    <div v-for="(image, imageIndex) in images" :key="imageIndex" class="image" :style="{
+      backgroundImage: 'url(' + image + ')',
+      width: '350px',
+      height: '200px',
+    }" @click="index = imageIndex"></div>
     <div class="btn-container">
-      <router-link to="/galerija"
-        ><button class="menu-btn">Nazad</button></router-link
-      >
+      <router-link to="/galerija"><button class="menu-btn">Nazad</button></router-link>
     </div>
   </div>
 </template>
@@ -88,5 +80,7 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+
+</style>
 >

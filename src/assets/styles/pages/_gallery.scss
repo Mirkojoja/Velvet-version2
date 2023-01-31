@@ -191,3 +191,9 @@ $desktop: 1024px;
           text-decoration: none;
       }
   }
+  @media (max-width: 768px) {
+    .container-gallery {
+     
+        padding: 35% 0 10% 0;
+    }
+}

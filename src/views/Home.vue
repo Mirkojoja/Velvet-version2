@@ -3,12 +3,13 @@
     <section class="relative bg-bg-image  bg-cover bg-center bg-no-repeat">
       <div class="absolute inset-0 bg-white opacity-50">
       </div>
-      <div class="relative mx-auto max-w-screen-xl px-8 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+      <div
+        class="relative mx-auto max-w-screen-xl px-8 py-40 md:py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
         <div class="max-w-xl text-center sm:text-left">
           <h1 class=" font-extrabold sm:text-2xl text-left">
-            Let us find your
-            <strong class="block font-extrabold text-rose-700 text-2xl md:text-4xl">
-              Pridružite nam se na putu ka kompletnom gastronomskom užitku Velvet Coffee and Kitchen & Velvet My Pub!
+            Pridružite nam se na putu ka kompletnom gastronomskom užitku
+            <strong class="block font-extrabold text-rose-600 text-xl md:text-3xl">
+              Velvet Coffee and Kitchen & Velvet My Pub!
             </strong>
           </h1>
           <p class="mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
@@ -24,9 +25,10 @@
     </section>
     <about />
     <FreshSection />
-    <DrinksSection />
-    <image-slider />
     <Drinks />
+    <image-slider />
+    <DrinksSection />
+
   </div>
 </template>
 

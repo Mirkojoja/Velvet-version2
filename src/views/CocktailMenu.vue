@@ -1,85 +1,3 @@
-<!-- <template>
-  <b-container id="menuNavbar">
-    <h1>Karta pića</h1>
-    <hr />
-    <div class="menu-container">
-      <div class="row">
-        <div class="col">
-          <button
-            v-for="b in buttons"
-            :key="b.id"
-            class="menu-btn"
-            @click="displayMenu(b)"
-          >
-            {{ b }}
-          </button>
-        </div>
-      </div>
-      <div class="row image-container">
-        <div v-for="d in divs" v-show="show === d.id" :key="d.id" class="col">
-          <img :src="d.image" alt="" />
-          <img :src="d.image1" alt="" />
-        </div>
-      </div>
-    </div>
-  </b-container>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      buttons: [
-        "Strana pića",
-        "Rakije",
-        "Kokteli",
-        "Piva",
-        "Bela vina",
-        "Rose vina",
-        "Crvena vina",
-      ],
-      divs: [
-        {
-          id: "Strana pića",
-          image1: require("@/assets/images/menu1/spirits2.jpg"),
-        },
-        {
-          id: "Rakije",
-          image: require("@/assets/images/menu1/spirits1.jpg"),
-        },
-        {
-          id: "Kokteli",
-          image: require("@/assets/images/menu1/cocktails1.jpg"),
-        },
-        {
-          id: "Piva",
-          image1: require("@/assets/images/menu1/beer.jpg"),
-        },
-        {
-          id: "Bela vina",
-          image: require("@/assets/images/menu1/wines1.jpg"),
-        },
-        {
-          id: "Rose vina",
-          image1: require("@/assets/images/menu1/wines2.jpg"),
-        },
-        {
-          id: "Crvena vina",
-          image: require("@/assets/images/menu1/wines3.jpg"),
-        },
-      ],
-      show: null,
-    };
-  },
-  methods: {
-    displayMenu(menu) {
-      this.show == menu ? (this.show = null) : (this.show = menu);
-    },
-  },
-};
-</script> -->
-
-
 
 <template>
   <div>
@@ -91,7 +9,7 @@ export default {
           </path>
         </svg>
       </div>
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32">
+      <div class="px-4 py-36 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32">
         <div class="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
           <h2 class="mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
             Karta pića<br class="hidden md:block" />
@@ -103,8 +21,8 @@ export default {
         </div>
       </div>
     </div>
-    <div class="p-16">
-      <div class="flex-wrap space-y-4 space-x-4 items-center justify-around">
+    <div class="md:p-16">
+      <div class=" items-center justify-around">
         <Button color="black" v-for="button in buttonsDrinks" :key="button.id" @buttonClicked="displayMenu(button.id)"
           :title="button.name">
 

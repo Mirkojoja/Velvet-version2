@@ -47,14 +47,14 @@ export default {
     <Transition>
         <div class="modal-mask h-screen">
             <div class="modal-wrapper">
-                <div class="modal-container w-2/3 sm:w-2/6">
+                <div class="modal-container w-4/5 md:w-2/4 my-8 mx-auto">
                     <div class="flex justify-end relative cursor-pointer">
                         <div @click="close">
                             <span
                                 class="absolute top-0 right-0 block w-10 h-5 -mt-2 -mr-4 text-xs text-center text-gray-600 transform rotate-45 bg-white rounded shadow-md cursor-pointer hover:text-rose-700">close</span>
                         </div>
                     </div>
-                    <div class="overflow-y-scroll h-screen p-4 md:p-32 " id="custome-scrollbar">
+                    <div class="md:overflow-y-scroll md:h-screen p-2 md:p-32 " id="custome-scrollbar">
                         <slot></slot>
                     </div>
                 </div>
@@ -99,7 +99,6 @@ export default {
 }
 
 .modal-container {
-    margin: 40px auto;
     background-color: rgba(36, 34, 34, 0.554);
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);

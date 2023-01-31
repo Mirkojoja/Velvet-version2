@@ -9,7 +9,7 @@
                     </path>
                 </svg>
             </div>
-            <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32">
+            <div class="px-4 py-36 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32">
                 <div class="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
                     <h2 class="mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
                         Jelovnik<br class="hidden md:block" />
@@ -22,8 +22,8 @@
                 </div>
             </div>
         </div>
-        <div class="p-16">
-            <div class="flex-wrap space-y-4 space-x-4 items-center justify-around">
+        <div class="md:p-16">
+            <div class=" items-center justify-around">
                 <Button color="black" v-for="button in buttons" :key="button.id" @buttonClicked="displayMenu(button.id)"
                     :title="button.name">
 

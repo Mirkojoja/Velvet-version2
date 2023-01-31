@@ -72,5 +72,15 @@
             margin-top: 10%;
           
         }
+        
+    }
+    @media (max-width: 768px) {
+        .btn-container {
+            margin-top: 10%;
+          
+        }
+        #food {
+          padding-top: 35%;
+        }
     }
   }

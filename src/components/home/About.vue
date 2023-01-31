@@ -1,57 +1,4 @@
-<!-- <template>
-  <b-container id="about" fluid class="py-1">
-    <b-row>
-      <b-col md="6" class="first-col">
-        <h1>Velvet Novi Sad</h1>
-        <hr />
-        <div class="col">
-          <h3>Coffee & kitchen</h3>
-          <address>
-            Alekse Šantića 23<br />
-            21000 Novi Sad<br />
-            Srbija
-          </address>
-        </div>
-        <div class="col">
-          <h3>My pub</h3>
-          <address>
-            Puškinova 40<br />
-            21000 Novi Sad<br />
-            Srbija
-          </address>
-        </div>
-        <h5>Radno vreme</h5>
-        <ul class="list-unstyled text-muted">
-          <li>Ponedeljak - Četvrtak 07:30-23:00</li>
-          <li>Petak - Subota 7:30-00:00</li>
-          <li>Nedelja 07:30-23:00</li>
-        </ul>
-        <div class="contact">
-          <h5>Kontakt:</h5>
-          <a href="tel:+ 381 60/6162-635">+381 60/6162-635</a><br />
-          <a href="tel:+ 381 62/555-444">+381 62/555-444</a>
-        </div>
-        <social-media />
-      </b-col>
-      <b-col class="md-6">
-        <h1>Naša priča</h1>
-        <hr />
-        <p class="px-4 about d-none d-lg-block d-xl-block">
-          {{ text }}
-        </p>
-        <p class="px-4 pt-3 about d-xl-none d-lg-none">
-          {{ formattedText }}
 
-          <a class="" style="color: blue" @click="showingText = !showingText">
-            Pročitaj {{ showingText ? "Manje" : "Više" }}
-          </a>
-        </p>
-        <img class="dark-logo" src="@/assets/images/logo-dark.png" alt="" />
-      </b-col>
-    </b-row>
-  </b-container>
-
-</template> -->
 <template>
   <section class="px-4 py-4 md:px-32 lg:p-8 bg-white text-gray-800">
     <div class="container mx-auto space-y-12">
@@ -80,7 +27,7 @@
         <div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
           <!-- <span class="text-xs uppercase dark:text-gray-400">Join, it's free</span> -->
           <h3 class="text-3xl font-bold">Velvet Novi Sad</h3>
-          <div class="flex flex-row justify-evenly">
+          <div class="flex flex-row justify-evenly flex-wrap">
             <div>
               <h5 class="mb-3 text-xl text-rose-700 font-semibold">Radno vreme</h5>
               <ul class="list-unstyled text-gray-400 text-sm">
@@ -94,7 +41,7 @@
               <a class="hover:text-rose-700 text-gray-400" href="tel:+ 381 62/555-444">+381 62/555-444</a>
             </div>
           </div>
-          <div class="flex justify-center">
+          <div class="flex justify-center py-2">
             <img class="dark-logo w-24" src="@/assets/images/logo-dark.png" alt="" />
           </div>
         </div>
