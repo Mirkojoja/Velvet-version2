@@ -1,17 +1,16 @@
 
 <template>
-  <section class="px-4 py-4 md:px-32 lg:p-8 bg-white text-gray-800">
+  <section class="relative  px-4 py-4 md:px-32 lg:p-8 bg-white text-gray-800">
     <div class="container mx-auto space-y-12">
       <div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row">
-        <img
-          src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-          alt="" class="h-80 dark:bg-gray-500 aspect-video">
+        <img src="../../assets/images/interior/interior17.jpg" alt=""
+          class="h-80 dark:bg-gray-500 aspect-video rounded-md">
         <div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
           <h3 class="text-3xl font-bold">Naša priča</h3>
           <p class="px-4 py-6 about d-none d-lg-block d-xl-block text-justify">
             {{ text }}
           </p>
-          <p class="px-4 pt-3 about d-xl-none d-lg-none text-justify">
+          <p class="md:px-4 pt-3 about d-xl-none d-lg-none text-justify">
             {{ formattedText }}
 
             <a class="" style="color: blue" @click="showingText = !showingText">
@@ -21,18 +20,17 @@
         </div>
       </div>
       <div class="flex flex-col overflow-hidden rounded-md shadow-sm lg:flex-row-reverse">
-        <img
-          src="https://images.unsplash.com/photo-1646052507321-13bdb0956810?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80s"
-          alt="" class="h-80 dark:bg-gray-500 aspect-video">
+        <img src="../../assets/images/interior/image11.jpg" alt=""
+          class="h-80 dark:bg-gray-500 aspect-video rounded-md">
         <div class="flex flex-col justify-center flex-1 p-6 dark:bg-gray-900">
           <!-- <span class="text-xs uppercase dark:text-gray-400">Join, it's free</span> -->
           <h3 class="text-3xl font-bold">Velvet Novi Sad</h3>
           <div class="flex flex-row justify-evenly flex-wrap">
             <div>
               <h5 class="mb-3 text-xl text-rose-700 font-semibold">Radno vreme</h5>
-              <ul class="list-unstyled text-gray-400 text-sm">
-                <li>Nedelja - Četvrtak 07:30-23:00</li>
-                <li>Petak - Subota 07:30-00:00</li>
+              <ul class="list-unstyled text-gray-400 text-base">
+                <li>Nedelja - Četvrtak 07:30 h - 23:00 h</li>
+                <li>Petak - Subota 07:30 h - 00:00 h</li>
               </ul>
             </div>
             <div>

@@ -1,14 +1,14 @@
 <template>
   <div>
-    <section class="relative bg-bg-image  bg-cover bg-center bg-no-repeat">
-      <div class="absolute inset-0 bg-white opacity-50">
+    <section class="relative bg-cover bg-center bg-no-repeat coverBackground min-h-screen ">
+      <div class="absolute inset-0 bg-black opacity-50">
       </div>
       <div
-        class="relative mx-auto max-w-screen-xl px-8 py-40 md:py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+        class="relative mx-auto max-w-screen-xl px-8 top-60 md:top-0 md:py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
         <div class="max-w-xl text-center sm:text-left">
-          <h1 class=" font-extrabold sm:text-2xl text-left">
+          <h1 class="text-white font-extrabold sm:text-2xl text-left">
             Pridružite nam se na putu ka kompletnom gastronomskom užitku
-            <strong class="block font-extrabold text-rose-600 text-xl md:text-3xl">
+            <strong class="block font-extrabold text-rose-600 text-xl md:text-3xl uppercase py-4 font-sans">
               Velvet Coffee and Kitchen & Velvet My Pub!
             </strong>
           </h1>
@@ -63,5 +63,7 @@ export default {
 </script>
 
 <style>
-
+.coverBackground {
+  background-image: url('../assets/images/background/velvet-background.jpeg');
+}
 </style>

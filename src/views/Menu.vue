@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="relative bg-bg-image">
+        <div class="relative imageTop ">
             <div class="absolute inset-x-0 bottom-0">
                 <svg viewBox="0 0 224 12" fill="currentColor" class="w-full -mb-1 text-white"
                     preserveAspectRatio="none">
@@ -9,7 +9,8 @@
                     </path>
                 </svg>
             </div>
-            <div class="px-4 py-36 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32">
+            <div
+                class="px-4 pt-44 md:py-36 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-32">
                 <div class="relative max-w-2xl sm:mx-auto sm:max-w-xl md:max-w-2xl sm:text-center">
                     <h2 class="mb-6 font-sans text-3xl font-bold tracking-tight text-white sm:text-4xl sm:leading-none">
                         Jelovnik<br class="hidden md:block" />
@@ -138,5 +139,10 @@ export default {
 .fade-enter,
 .fade-leave-to {
     transition: opacity .5s;
+}
+
+.imageTop {
+    background: rgb(196, 18, 36);
+    background: linear-gradient(90deg, rgba(196, 18, 36, 0.9752275910364145) 11%, rgba(32, 4, 37, 1) 26%, rgba(2, 0, 36, 1) 65%, rgba(147, 21, 43, 1) 79%);
 }
 </style>

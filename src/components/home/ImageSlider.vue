@@ -1,10 +1,10 @@
 <template>
-  <div class="relative bg-bg-fresh bg-cover bg-center object-cover bg-no-repeat px-5 md:px-8 py-12">
+  <div class="relative bg-black  bg-cover bg-center object-cover bg-no-repeat px-5 md:px-8 py-12">
     <div class="py-8 flex flex-col justify-center ">
       <h2 class="text-3xl font-bold text-rose-700 tracking-tight sm:text-4xl uppercase">
         Preporuka našeg Šefa Kuhinje
       </h2>
-      <p class="my-4 text-lg text-gray-800 font font-semibold">
+      <p class="my-4 text-lg text-white font font-semibold">
         Vrhunska priprema i posvećenost poslu čine da naša jela pored toga što izgledaju lepo predstavljaju
         pravi užitak za vas i vaša nepca.
       </p>
@@ -16,7 +16,7 @@
       <swiper :options="swiperOption">
         <swiper-slide v-for="item in galleryItems" :key="item.id">
           <img :src="item.url" class="rounded-2xl" blank=" ">
-          <p class=" text-gray-800 text-lg md:text-xl font-bold font-serif">{{ item.hoovertext }}</p>
+          <p class=" text-white text-lg md:text-xl font-bold font-sans">{{ item.hoovertext }}</p>
         </swiper-slide>
         <div class="swiper-button-prev" slot="button-prev"></div>
         <div class="swiper-button-next" slot="button-next"></div>
@@ -195,7 +195,7 @@ export default {
 img {
   height: 300px;
   width: 300px;
-  border-radius: 3px;
+  border-radius: 1.5rem;
 }
 
 .swiper-slide {
